@@ -37,7 +37,7 @@ ADD https://github.com/packwiz/packwiz-installer/releases/download/${PACKWIZ_INS
 COPY pack/ /pack/
 # The server side of the pack: client-only mods (Sodium, maps) are skipped, hashes are verified.
 RUN java -jar /opt/packwiz-installer-bootstrap.jar --bootstrap-no-update -g -s server file:///pack/pack.toml && \
-    rm -f packwiz-installer.jar packwiz.json options.txt
+    rm -f packwiz-installer.jar packwiz.json options.txt servers.dat
 
 FROM ${JAVA_IMAGE}
 ARG RCON_CLI_VERSION

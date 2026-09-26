@@ -24,6 +24,7 @@ These decide what gets added or removed. Check a proposed mod against them befor
 | `server/` | Server image: `Dockerfile`, `entrypoint.sh`, default `server.properties` |
 | `.github/workflows/image.yml` | Builds, boot-tests and publishes the image to ghcr.io |
 | `test/` | Server test harness and checks |
+| `tools/` | Generators for binary pack files (`servers.dat`) |
 | `Makefile` | `make mrpack` (the file players import), `make test`, `make smoke` |
 | `README.md` | For players and friends: what the pack is, how to install it |
 | `build/`, `dist/` | Test server, caches, built `.mrpack` files (gitignored) |
@@ -66,12 +67,13 @@ readable.
 |---|---|---|
 | `create_submarine-common.toml` | `disableStartupScreens = true` | Players would otherwise get a "configure the mod" prompt for settings the server controls |
 | `options.txt` | Music volume 25% | Default only: marked `preserve = true` in `index.toml`, so it is installed when missing and never overwrites a player's own settings |
+| `servers.dat` | Server list with `keel-mc.g8n.me` | Same `preserve = true` default, so it never wipes servers a player added. Binary NBT: regenerate with `tools/servers_dat.py` |
 
 `preserve` has no meaning in a `.mrpack`: overrides are applied on import, which is always a fresh instance.
 
 `options.txt` holds only the keys we set; Minecraft fills in the rest. Keep its `version:` line at the
 Minecraft data version (3955 for 1.21.1), or Minecraft runs its old-format upgrade over the file. The
-`preserve` flag lives only in `index.toml`, so check it is still there after editing the file.
+`preserve` flag lives only in `index.toml`, so check it is still there after editing either file.
 
 Keep `enableDeeperOceans = false` in the Deep Seas config: Tectonic already deepens oceans, and the
 YUNG's monument height above is calibrated to Tectonic's sea floor alone.

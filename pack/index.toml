@@ -210,6 +210,11 @@ hash = "0e4d3a4db454e93ee3a1ff22d4befe1ab2491cbcf387503a0da0297d8d3c03f5"
 preserve = true
 
 [[files]]
+file = "servers.dat"
+hash = "a7304b421ab7d283ab1412a6a548bc068fbc4e8dfc46a4331fdc880315bf5810"
+preserve = true
+
+[[files]]
 file = "world/datapacks/keel-and-cloud/data/betteroceanmonuments/worldgen/structure/ocean_monument.json"
 hash = "30e67bdfa71639e2af8e0729a9cc1c9e9875cea08b9a22b867faee7d6a42cf25"
 

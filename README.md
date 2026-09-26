@@ -22,7 +22,7 @@ app cannot open this pack.
 2. In Prism: **Add Instance → Import**, choose the file, click **OK**. Wait for the downloads.
 3. Give it more memory: right-click the instance → **Edit → Settings → Java**, tick **Memory** and set
    **Maximum memory** to **6144 MB** (at least 4096 MB if your computer has 8 GB or less).
-4. Launch, then **Multiplayer → Add Server** → `keel-mc.g8n.me`.
+4. Launch and open **Multiplayer**: the Keel & Cloud server (`keel-mc.g8n.me`) is already in the list.
 
 When the pack is updated you will get a new `.mrpack`. Import it as a new instance; your worlds live on the
 server, so nothing is lost.

@@ -21,9 +21,12 @@ These decide what gets added or removed. Check a proposed mod against them befor
 |---|---|
 | `pack/` | packwiz manifest. `pack/mods/*.pw.toml` is one file per mod |
 | `pack/world/datapacks/keel-and-cloud/` | Our datapack: Create recipes for Ars items, YUNG's monument height |
+| `server/` | Server image: `Dockerfile`, `entrypoint.sh`, default `server.properties` |
+| `.github/workflows/image.yml` | Builds, boot-tests and publishes the image to ghcr.io |
 | `test/` | Server test harness and checks |
-| `build/` | Test server and caches (gitignored, disposable) |
-| `create aeronautics/` | Daniel's original CurseForge instance, reference only (gitignored) |
+| `Makefile` | `make mrpack` (the file players import), `make test`, `make smoke` |
+| `README.md` | For players and friends: what the pack is, how to install it |
+| `build/`, `dist/` | Test server, caches, built `.mrpack` files (gitignored) |
 
 ## Working on the pack
 
@@ -41,8 +44,9 @@ packwiz is installed with `mise exec go@1.26.7 -- go install github.com/packwiz/
 
 ## The datapack
 
-- It ships inside the pack at `world/datapacks/`, so packwiz installs it into the server's world before
-  the first start. That only works with `level-name=world`. Clients get the recipes synced from the
+- It ships inside the pack at `world/datapacks/` and reaches the server's world before the first start:
+  the image entrypoint copies it in, and packwiz does the same for the test server. That only works with
+  `level-name=world`. Clients get the recipes synced from the
   server; singleplayer worlds do not get the datapack.
 - **Worldgen overrides only apply to chunks generated after they are in place.** Changing
   `data/betteroceanmonuments/...` on a live server affects new terrain only.
@@ -63,6 +67,8 @@ readable.
 | `create_submarine-common.toml` | `disableStartupScreens = true` | Players would otherwise get a "configure the mod" prompt for settings the server controls |
 | `options.txt` | Music volume 25% | Default only: marked `preserve = true` in `index.toml`, so it is installed when missing and never overwrites a player's own settings |
 
+`preserve` has no meaning in a `.mrpack`: overrides are applied on import, which is always a fresh instance.
+
 `options.txt` holds only the keys we set; Minecraft fills in the rest. Keep its `version:` line at the
 Minecraft data version (3955 for 1.21.1), or Minecraft runs its old-format upgrade over the file. The
 `preserve` flag lives only in `index.toml`, so check it is still there after editing the file.
@@ -70,12 +76,34 @@ Minecraft data version (3955 for 1.21.1), or Minecraft runs its old-format upgra
 Keep `enableDeeperOceans = false` in the Deep Seas config: Tectonic already deepens oceans, and the
 YUNG's monument height above is calibrated to Tectonic's sea floor alone.
 
+## Server image
+
+Pins for the build tools are ARGs at the top of `server/Dockerfile`; NeoForge comes from `pack.toml`.
+
+- **Ubuntu base, not Alpine.** Sable extracts native physics libraries built against glibc.
+- **The entrypoint must `exec` Java.** Minecraft saves the world in its SIGTERM shutdown hook; a shell in
+  between swallows the signal and `docker stop` loses everything since the last autosave.
+  `test/image-smoke.sh` checks this with a block placed before the stop.
+- **Image-owned vs operator-owned files.** Mods, libraries, `config/` and our datapack are replaced from
+  the image on every start, so a server always matches its image tag. `server.properties`, ops, whitelist
+  and the world are written once and then left to the operator.
+- `allow-flight=true` is required: players standing on a moving ship otherwise get kicked for flying.
+- The NeoForge install stays cached across pack changes because only the extracted version string is
+  copied into its stage. Keep it that way; a full `COPY pack/` there makes every build reinstall NeoForge.
+
+## Releasing
+
+Bump `version` in `pack/pack.toml`, commit, tag `v<version>`, push the tag. CI publishes
+`ghcr.io/haimgel/keel-and-cloud-mc:<version>` and `:latest`. Build the matching `.mrpack` with
+`make mrpack` from the same commit and share it; players and server must run the same version.
+
 ## Testing
 
 ```sh
 test/server-test.sh --fresh-world --keep-running   # install pack, boot, check log + datapack
 python3 test/monuments.py                          # monument placement against the Tectonic sea floor
 python3 test/rcon.py 'command' ...                 # console commands on the running test server
+make smoke                                         # build the image and boot-test it, as CI does
 ```
 
 - `--fresh-world` is required after any worldgen change.
@@ -93,5 +121,5 @@ Pins live in `pack/mods/*.pw.toml`. Record here only what was deliberately not t
 | Create Deep Seas | Pinned 2.2.4, the first release that starts on a dedicated server. 3.0 (physics rewrite, High Seas module) is pending upstream | 3.0 is released: back up the world, test on a copy first |
 | Sodium | 0.8.13. Sable rejects anything below 0.8.12-alpha.2; Deep Seas rejects 0.6.13 | A Sable or Deep Seas release changes its declared Sodium range |
 | Create: Ars Nouveau Compat | Not taken: despite the name, its recipes mill finished Ars blocks back into scrap and it needs Create: Compat Core | Never, unless it starts making Ars items |
-| Iron's Spells, Northstar, Power Grid, Waystones, Immersive Aircraft | Removed from Daniel's original instance: duplicate systems, progression, or teleporting | The design rules change |
+| Iron's Spells, Northstar, Power Grid, Waystones, Immersive Aircraft | Not taken: duplicate systems, progression, or teleporting | The design rules change |
 | Simple Voice Chat | Removed: players use Discord. Proximity voice is the only thing lost, and the server needs no extra UDP port | Players want positional voice in-game |

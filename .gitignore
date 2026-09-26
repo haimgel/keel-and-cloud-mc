@@ -1,8 +1,7 @@
-# Test server, client instance cache and downloaded installers
+# Test server and caches; built .mrpack files
 /build/
+/dist/
 
-# Daniel's original CurseForge instance: reference only, holds logs, server list and account caches
-/create aeronautics/
-
+.idea/
 __pycache__/
 .DS_Store

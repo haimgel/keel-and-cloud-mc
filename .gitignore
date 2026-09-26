@@ -1,0 +1,8 @@
+# Test server, client instance cache and downloaded installers
+/build/
+
+# Daniel's original CurseForge instance: reference only, holds logs, server list and account caches
+/create aeronautics/
+
+__pycache__/
+.DS_Store

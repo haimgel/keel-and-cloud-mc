@@ -1,0 +1,13 @@
+name = "Keel & Cloud"
+author = "haim"
+version = "0.1.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "ec455deb6999b1c484eaccd050329c67f0ed38f11c6fc3b97857da492e6a6f61"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.252"

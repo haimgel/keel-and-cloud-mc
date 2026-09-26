@@ -1,0 +1,234 @@
+hash-format = "sha256"
+
+[[files]]
+file = "config/create_submarine-common.toml"
+hash = "9311044f17fdb28550e18afb0bc5f76723e77ff89c37f56667ccf84b73be1c24"
+
+[[files]]
+file = "mods/appleskin.pw.toml"
+hash = "a529a4a57244c8846d47eaf0ec61c595285161ddf13abbd9fa51e985f54e568c"
+metafile = true
+
+[[files]]
+file = "mods/ars-creo.pw.toml"
+hash = "577a361378e8291549af147c206e0e6b422487ce995e1bc8d1e308d97f10d23c"
+metafile = true
+
+[[files]]
+file = "mods/ars-nouveau.pw.toml"
+hash = "c05551fc5b80699e12a34e2983bbee9f7fd619fdb8db221b997405296322ea1c"
+metafile = true
+
+[[files]]
+file = "mods/biomes-o-plenty.pw.toml"
+hash = "c5ab1186365d13207ac5c554809ef5ef553edf7a1a2fb23275b1e3986fe12e4e"
+metafile = true
+
+[[files]]
+file = "mods/corpse.pw.toml"
+hash = "ba5cfcdd228e1313e62dab68512d6ec90d4dbbed842a184f4fdfa7017ec0687a"
+metafile = true
+
+[[files]]
+file = "mods/create-aeronautics.pw.toml"
+hash = "621de259778892a6369517d2a2c79de33f8aaefe7f8b2481c0e23a5488485598"
+metafile = true
+
+[[files]]
+file = "mods/create-aeroworks.pw.toml"
+hash = "0b00c3d86d320f4d7473938a4b7b5f8785cd1e7f65423948531a96b522757626"
+metafile = true
+
+[[files]]
+file = "mods/create-ars-noua.pw.toml"
+hash = "30822d053f914c4798a8e16029cb73fca800a67104451c7176bc5671c5df09f3"
+metafile = true
+
+[[files]]
+file = "mods/create-big-cannons.pw.toml"
+hash = "5fcdacf55ad8a007ac6d64bc568430de96bda74086f15a98d19c7e55067d83c7"
+metafile = true
+
+[[files]]
+file = "mods/create-deep-seas.pw.toml"
+hash = "4d72366dec8d78cb2db5c0a50f142a2a755ae938a23da034956744c26dedad78"
+metafile = true
+
+[[files]]
+file = "mods/create-dragons-plus.pw.toml"
+hash = "5eb7da857f70d03499255f35d05e1004bae8bdf3e5a8350f3cf6ff22c1a6fd0d"
+metafile = true
+
+[[files]]
+file = "mods/create-enchantment-industry.pw.toml"
+hash = "fb604f59e155e17ce4f193e043038789b29234f02be651b3d84d988fb938f64f"
+metafile = true
+
+[[files]]
+file = "mods/create-power-loader.pw.toml"
+hash = "774df804367e2d467253d336437b88b7c0edce15916fb90741e8a9277e783386"
+metafile = true
+
+[[files]]
+file = "mods/create.pw.toml"
+hash = "b9aaadff5300ec35b0f4b62f9d9f5cd08aedf0e6c9ebd8d746b06dfd8a755577"
+metafile = true
+
+[[files]]
+file = "mods/createoplenty.pw.toml"
+hash = "9e4f6ba9bf7ea86375e4632a01912ec2219960e785503fa0b5b9c0e273a5d6cb"
+metafile = true
+
+[[files]]
+file = "mods/curios.pw.toml"
+hash = "5b5063624d376f7deb8bbb5ecb8dcf3aa01a2edae137f76a208d1654ee130342"
+metafile = true
+
+[[files]]
+file = "mods/effortless-building.pw.toml"
+hash = "72932230b270f5fc0d47136284003a1145be9be3f18b1f592d3570c4030f29a7"
+metafile = true
+
+[[files]]
+file = "mods/farmers-delight.pw.toml"
+hash = "c2b15a6dfbdd09957e7ba197d65a6fd009474c623788874d3d80f5a23a28372b"
+metafile = true
+
+[[files]]
+file = "mods/ferrite-core.pw.toml"
+hash = "b4bbe1023e3adb39173823599788b7cb04e6ac550aa488dd0aa74cbc10571e79"
+metafile = true
+
+[[files]]
+file = "mods/geckolib.pw.toml"
+hash = "9eb0d093f35ed16c113dff42151622c4c8e28e0720895dd9fdc65012fc5c61f3"
+metafile = true
+
+[[files]]
+file = "mods/glitchcore.pw.toml"
+hash = "aa7fcd235f46bc59609d4b23d6cf6c93b1e93e18b1ff96cc88bf8f44e16a528a"
+metafile = true
+
+[[files]]
+file = "mods/jade.pw.toml"
+hash = "f946c73b5ae38c683cacf4b3c58a926d3a07a2983951da65d4aef1982e895219"
+metafile = true
+
+[[files]]
+file = "mods/jei.pw.toml"
+hash = "c9397d739e667b9cafa27e1c260ddc35faba4400f949ff49d8e15bd6faeb8d48"
+metafile = true
+
+[[files]]
+file = "mods/lithostitched.pw.toml"
+hash = "126ac2a4020416c971511b5b32f0a1303f6dc431418dfb2da7869c53a7b4ec72"
+metafile = true
+
+[[files]]
+file = "mods/modernfix.pw.toml"
+hash = "94568b1e4198e082b65364844481d42eff897621d4842fc4774a3e6a4e2137cd"
+metafile = true
+
+[[files]]
+file = "mods/ping-wheel.pw.toml"
+hash = "3a3f2358be3df74aea7755d0bdbdb3ca2a136ea305afe1dc47c739452ed8f6d2"
+metafile = true
+
+[[files]]
+file = "mods/rpl.pw.toml"
+hash = "3e3877223cf3eede571b4c87c22c268c71394336b2466e8b7e5cf7e7bf87bc89"
+metafile = true
+
+[[files]]
+file = "mods/sable.pw.toml"
+hash = "1f5e988ec204984eb2fac3013222b75099e964fd6cfb01a561f04ac566a3b25f"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+hash = "fd7473a15dd771e7a7f53159840799afffc62dda2abc4ee95d7ee0cbeac569b2"
+metafile = true
+
+[[files]]
+file = "mods/sophisticated-backpacks.pw.toml"
+hash = "01ff4570125c511912460b9bf6e2e4c186357226d81677cb58b28ffefe8e7af6"
+metafile = true
+
+[[files]]
+file = "mods/sophisticated-core.pw.toml"
+hash = "7e87a2d06891d4431373b014488420d95a9e1af42ee570bfe97743e5aeae8d81"
+metafile = true
+
+[[files]]
+file = "mods/spark.pw.toml"
+hash = "76298b8c0ff790b21d23b1eed1c1bf03b9c897dd094b754bc4da710fe7e236c3"
+metafile = true
+
+[[files]]
+file = "mods/tectonic.pw.toml"
+hash = "f1485e8d7156447e01de2db3cb9b6066683bac2a8f8c65034b531a93a2d1e37a"
+metafile = true
+
+[[files]]
+file = "mods/terrablender.pw.toml"
+hash = "8c9c42ad121f7d946012ec1b7c3dd91c2ae6bec4416bc4fbb11747a7cf2a4805"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-minimap.pw.toml"
+hash = "3c32bf315ce700b893a2528abbcc1a858d0093bf1d771ecfff6c5dac4c57a20f"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-world-map.pw.toml"
+hash = "16de865427ca185d64d27c661d3c2c98669c7d67bb202053be14701916158cd0"
+metafile = true
+
+[[files]]
+file = "mods/yungs-api.pw.toml"
+hash = "a7991a085a21b6218f17b74e05b1c6e8898c0fa14d88edbec65934ebe3241642"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-dungeons.pw.toml"
+hash = "f8555d0505d806bac8340b09a6d1d2b75640911572222d5facbd7d335d337a06"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-mineshafts.pw.toml"
+hash = "b6e1e93598fe302f4c0ca2f8c81666fdeb2d2d86abb7c812be7f28dad969e590"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-ocean-monuments.pw.toml"
+hash = "d778b5d1e27ccfe29adb46c79920cc6c6e6fa152bc5c305fe8652a33b2cf34db"
+metafile = true
+
+[[files]]
+file = "options.txt"
+hash = "0e4d3a4db454e93ee3a1ff22d4befe1ab2491cbcf387503a0da0297d8d3c03f5"
+preserve = true
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/data/betteroceanmonuments/worldgen/structure/ocean_monument.json"
+hash = "30e67bdfa71639e2af8e0729a9cc1c9e9875cea08b9a22b867faee7d6a42cf25"
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/data/keel/recipe/compacting/blank_parchment.json"
+hash = "5b2b0f3707c9d69e9fdbc3f1a75baf987e4fa69bcff2a19acf2c9ab48f1bfad0"
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/data/keel/recipe/milling/magebloom_fiber.json"
+hash = "06100145246fb93626fbf9663e4e2b87c8030e8ef2e1e6879d34766de343a05b"
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/data/keel/recipe/milling/sourceberry_bush.json"
+hash = "4bfdf0eb4663c34a18bec9b45828c47b3cd610ddcc166e03a8ccbdb60268607f"
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/data/keel/recipe/mixing/sourcestone.json"
+hash = "b7704522f42114f6f7c5cf3e916bf565c3dd57776a5c2c9844dee7f299d05677"
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/pack.mcmeta"
+hash = "5b6be168c1ad1a0ba8174c43363ef2c26b0dc8ad430a982e45d2f6a8d8385da8"

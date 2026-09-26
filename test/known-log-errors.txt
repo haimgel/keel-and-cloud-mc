@@ -1,0 +1,4 @@
+# Extended regexes for server log ERROR lines that are harmless. Each entry needs a reason.
+
+# Create: Enchantment Industry ships loot tables for blocks it does not register.
+LootDataType.*create_enchantment_industry:blocks/

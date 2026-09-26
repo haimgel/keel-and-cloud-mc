@@ -1,0 +1,14 @@
+name = "Create: Create O' Plenty (Create + Biomes O' Plenty Mod compat)"
+filename = "CreateOPlenty-NeoForge-Create+6.0.7-3.0.jar"
+side = "both"
+pin = true
+
+[download]
+url = "https://cdn.modrinth.com/data/HgWaxodv/versions/k7AAVyW3/CreateOPlenty-NeoForge-Create%2B6.0.7-3.0.jar"
+hash-format = "sha512"
+hash = "758ef597ea2f1767d6f7a17bc6ea43c3a441b15fb8ff48d2bdcf71a7168f28e903d19c47547ac7fda3a02cd7c324ea7baab8ead18593b17a3799ae15642d77ec"
+
+[update]
+[update.modrinth]
+mod-id = "HgWaxodv"
+version = "k7AAVyW3"

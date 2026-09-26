@@ -1,0 +1,38 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "c:stones"
+    },
+    {
+      "tag": "c:stones"
+    },
+    {
+      "tag": "c:stones"
+    },
+    {
+      "tag": "c:stones"
+    },
+    {
+      "tag": "c:stones"
+    },
+    {
+      "tag": "c:stones"
+    },
+    {
+      "tag": "c:stones"
+    },
+    {
+      "tag": "c:stones"
+    },
+    {
+      "tag": "c:gems/source"
+    }
+  ],
+  "results": [
+    {
+      "count": 8,
+      "id": "ars_nouveau:sourcestone"
+    }
+  ]
+}

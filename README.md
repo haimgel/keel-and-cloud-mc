@@ -1,5 +1,7 @@
 # Keel & Cloud
 
+![Keel & Cloud: an airship over the sea at dusk, a submarine below](assets/banner.png)
+
 **Build an airship. Fly it across the world. Then build a submarine and go find out what's at the bottom of
 the ocean.**
 
@@ -17,12 +19,17 @@ You need a launcher that can import modpacks. **[Prism Launcher](https://prismla
 works on Windows, macOS and Linux; the [Modrinth App](https://modrinth.com/app) works too. The CurseForge
 app cannot open this pack.
 
-1. Get `keel-and-cloud-<version>.mrpack` from whoever shared it with you. It is a small file: the launcher
-   downloads the mods itself.
-2. In Prism: **Add Instance → Import**, choose the file, click **OK**. Wait for the downloads.
-3. Give it more memory: right-click the instance → **Edit → Settings → Java**, tick **Memory** and set
+1. Download `Keel-and-Cloud-<version>.mrpack` from the
+   [latest release](https://github.com/haimgel/keel-and-cloud-mc/releases/latest). It is a small file: the
+   launcher downloads the mods itself.
+2. In Prism: **Add Instance → Import**, choose the file, click **OK**. Wait for the downloads. You can
+   rename the instance to "Keel & Cloud" and give it [the icon](assets/icon-256.png) (right-click →
+   **Change Icon**).
+3. Make Prism use the right Java. The pack needs **Java 21**; a newer Java may be picked and fail. In
+   **Settings → Java**, tick **Auto-detect Java version** and **Auto-download Mojang Java**.
+4. Give it more memory: right-click the instance → **Edit → Settings → Java**, tick **Memory** and set
    **Maximum memory** to **6144 MB** (at least 4096 MB if your computer has 8 GB or less).
-4. Launch and open **Multiplayer**: the Keel & Cloud server (`keel-mc.g8n.me`) is already in the list.
+5. Launch and open **Multiplayer**: the Keel & Cloud server (`keel-mc.g8n.me`) is already in the list.
 
 When the pack is updated you will get a new `.mrpack`. Import it as a new instance; your worlds live on the
 server, so nothing is lost.
@@ -49,14 +56,14 @@ The pack is a [packwiz](https://packwiz.infra.link/) manifest. `CLAUDE.md` has t
 add or change mods, and why things are the way they are. Read it before changing anything.
 
 ```sh
-make mrpack   # dist/keel-and-cloud-<version>.mrpack, the file to share
+make mrpack   # dist/Keel-and-Cloud-<version>.mrpack, the file to share
 make test     # install the pack into a local server on a fresh world and check it boots cleanly
 make smoke    # build the server image and boot-test it
 ```
 
 To release: bump `version` in `pack/pack.toml`, commit, tag `v<version>` and push the tag. CI builds and
-tests the server image and publishes it to `ghcr.io/haimgel/keel-and-cloud-mc`. Share the `.mrpack` from
-`make mrpack` with players.
+tests the server image and publishes it to `ghcr.io/haimgel/keel-and-cloud-mc`. Then attach the `.mrpack`
+to the GitHub release: `make mrpack && gh release create v<version> dist/Keel-and-Cloud-<version>.mrpack`.
 
 ### Running the server
 
@@ -73,7 +80,8 @@ docker exec keel rcon-cli --password <secret> list
 | `JAVA_FLAGS` | Aikar's G1 flags | Extra JVM flags |
 
 - `/data` holds the world and everything an operator owns: `server.properties`, ops, whitelist, logs.
-- Mods, libraries, `config/` and the pack's datapack come from the image and are replaced on every start.
+- Mods, libraries, `config/`, the pack's datapack and the server icon come from the image and are replaced
+  on every start.
   Change them in the pack, not on the server.
 - `docker stop` saves the world: the entrypoint `exec`s Java so it receives the stop signal. Allow it time
   to finish (Kubernetes: `terminationGracePeriodSeconds` of 60 or more).

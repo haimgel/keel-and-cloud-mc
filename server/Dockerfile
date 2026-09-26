@@ -54,6 +54,7 @@ RUN tar -xzf /tmp/rcon-cli.tgz -C /usr/local/bin rcon-cli && rm /tmp/rcon-cli.tg
 COPY --from=neoforge /server/ /opt/minecraft/server/
 COPY --from=pack /server/ /opt/minecraft/server/
 COPY server/entrypoint.sh server/server.properties /opt/minecraft/
+COPY assets/icon-64.png /opt/minecraft/server-icon.png
 
 # Heap size, then Aikar's G1 flags (https://docs.papermc.io/paper/aikars-flags).
 # Size the container's memory limit at least 1.5 GB above MEMORY_SIZE.

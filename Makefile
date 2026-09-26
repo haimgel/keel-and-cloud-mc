@@ -1,6 +1,7 @@
 PACKWIZ ?= $(shell command -v packwiz || echo $(HOME)/.local/share/mise/installs/go/1.26.7/bin/packwiz)
 VERSION := $(shell sed -n 's/^version = "\(.*\)"/\1/p' pack/pack.toml)
-MRPACK  := dist/keel-and-cloud-$(VERSION).mrpack
+# Prism names an imported instance after this file, and GitHub mangles spaces and "&" in release assets.
+MRPACK  := dist/Keel-and-Cloud-$(VERSION).mrpack
 IMAGE   ?= keel-and-cloud:dev
 
 .PHONY: mrpack image smoke test serve clean

@@ -8,12 +8,13 @@ cd /data
 
 # Owned by the image and replaced on every start, so the server always runs exactly the image's pack.
 # Edits made to these on the live server are lost on restart: change them in the pack instead.
-rm -rf libraries mods config world/datapacks/keel-and-cloud
+rm -rf libraries mods config world/datapacks/keel-and-cloud server-icon.png
 ln -s "$IMAGE/libraries" libraries
 ln -s "$IMAGE/mods" mods
 cp -a "$IMAGE/config" config
 mkdir -p world/datapacks
 cp -a "$IMAGE/world/datapacks/keel-and-cloud" world/datapacks/
+cp /opt/minecraft/server-icon.png server-icon.png
 
 # Owned by the operator: written once, then left alone.
 if [ ! -f server.properties ]; then

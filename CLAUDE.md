@@ -24,7 +24,8 @@ These decide what gets added or removed. Check a proposed mod against them befor
 | `server/` | Server image: `Dockerfile`, `entrypoint.sh`, default `server.properties` |
 | `.github/workflows/image.yml` | Builds, boot-tests and publishes the image to ghcr.io |
 | `test/` | Server test harness and checks |
-| `tools/` | Generators for binary pack files (`servers.dat`) |
+| `tools/` | Generators for binary files: `servers.dat`, the icon and banner |
+| `assets/` | Icon (64 px for the server list, 256 px for launchers) and README banner, from `tools/icon.py` |
 | `Makefile` | `make mrpack` (the file players import), `make test`, `make smoke` |
 | `README.md` | For players and friends: what the pack is, how to install it |
 | `build/`, `dist/` | Test server, caches, built `.mrpack` files (gitignored) |
@@ -86,8 +87,8 @@ Pins for the build tools are ARGs at the top of `server/Dockerfile`; NeoForge co
 - **The entrypoint must `exec` Java.** Minecraft saves the world in its SIGTERM shutdown hook; a shell in
   between swallows the signal and `docker stop` loses everything since the last autosave.
   `test/image-smoke.sh` checks this with a block placed before the stop.
-- **Image-owned vs operator-owned files.** Mods, libraries, `config/` and our datapack are replaced from
-  the image on every start, so a server always matches its image tag. `server.properties`, ops, whitelist
+- **Image-owned vs operator-owned files.** Mods, libraries, `config/`, our datapack and `server-icon.png`
+  are replaced from the image on every start, so a server always matches its image tag. `server.properties`, ops, whitelist
   and the world are written once and then left to the operator.
 - `allow-flight=true` is required: players standing on a moving ship otherwise get kicked for flying.
 - The NeoForge install stays cached across pack changes because only the extracted version string is
@@ -97,7 +98,17 @@ Pins for the build tools are ARGs at the top of `server/Dockerfile`; NeoForge co
 
 Bump `version` in `pack/pack.toml`, commit, tag `v<version>`, push the tag. CI publishes
 `ghcr.io/haimgel/keel-and-cloud-mc:<version>` and `:latest`. Build the matching `.mrpack` with
-`make mrpack` from the same commit and share it; players and server must run the same version.
+`make mrpack` from the same commit and attach it to the GitHub release
+(`gh release create v<version> dist/Keel-and-Cloud-<version>.mrpack`); players and server must run the same
+version.
+
+The `.mrpack` is the only thing players get, and the format is limited:
+
+- **Prism names the instance after the file**, not after the pack's own name. GitHub turns spaces and `&`
+  in release asset names into dots, so `Keel-and-Cloud-<version>.mrpack` is the best achievable title.
+- **No instance icon and no Java version.** The format has fields for neither; the README tells players to
+  set the icon and to turn on Prism's automatic Java 21. Minecraft 1.21.1 needs Java 21 and Prism may
+  otherwise pick a newer system Java.
 
 ## Testing
 

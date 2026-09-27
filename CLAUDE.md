@@ -90,6 +90,10 @@ Pins for the build tools are ARGs at the top of `server/Dockerfile`; NeoForge co
 - **Image-owned vs operator-owned files.** Mods, libraries, `config/`, our datapack and `server-icon.png`
   are replaced from the image on every start, so a server always matches its image tag. `server.properties`, ops, whitelist
   and the world are written once and then left to the operator.
+- **Async Locator Refined is load-bearing** (server-only). Treasure and explorer maps in loot chests search
+  for their structure on the main thread, reading chunks from disk. On network storage (Ceph) with
+  Tectonic's large oceans that search outlasts the 60 s watchdog and the server is killed. The mod runs it
+  in the background; the map shows "Working..." for a moment. Keep it until vanilla fixes this.
 - `allow-flight=true` is required: players standing on a moving ship otherwise get kicked for flying.
 - The NeoForge install stays cached across pack changes because only the extracted version string is
   copied into its stage. Keep it that way; a full `COPY pack/` there makes every build reinstall NeoForge.

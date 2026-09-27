@@ -20,6 +20,11 @@ hash = "c05551fc5b80699e12a34e2983bbee9f7fd619fdb8db221b997405296322ea1c"
 metafile = true
 
 [[files]]
+file = "mods/async-locator-refined.pw.toml"
+hash = "ac6708550517f775707a8c3a64b233e51aebd847e7901cd49f8b8ccc80a59ed1"
+metafile = true
+
+[[files]]
 file = "mods/biomes-o-plenty.pw.toml"
 hash = "c5ab1186365d13207ac5c554809ef5ef553edf7a1a2fb23275b1e3986fe12e4e"
 metafile = true

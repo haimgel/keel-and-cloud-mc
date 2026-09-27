@@ -46,7 +46,7 @@ singleplayer too, just without them.
 | Magic | Ars Nouveau, Ars Creo (spells on contraptions), Create: Enchantment Industry |
 | World | Biomes O' Plenty, Tectonic terrain, YUNG's better monuments, mineshafts and dungeons |
 | Everyday | Farmer's Delight, Sophisticated Backpacks, Corpse, Effortless Building, JEI, Jade, Xaero's maps, Ping Wheel |
-| Speed | Sodium, ModernFix, FerriteCore |
+| Speed | Sodium, ModernFix, FerriteCore; Async Locator on the server, so treasure maps never freeze it |
 
 The full list with exact versions is in `pack/mods/`.
 

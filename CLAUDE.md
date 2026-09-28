@@ -83,16 +83,26 @@ YUNG's monument height above is calibrated to Tectonic's sea floor alone.
 
 `assets/source/keel-and-cloud.af` holds two artboards, Icon (512 px) and Banner (1200×400). The style is
 a 1920s Constructivist (Stenberg brothers) film poster: paper, ink, red and blue only; type as structure
-(KEEL diving with the sea, CLOUD over the red circle); the airship seen from below as a solid silhouette;
+(KEEL diving with the sea, CLOUD over the red circle); the airship as a solid black side-on silhouette;
 the sea field set to Multiply so it overprints the circle; a "Print grain" noise layer on top.
 
 - The audience is 12-year-olds: keep it figurative and bold, neither abstract nor childish.
 - Keep the look flat: no outlines, gradients or shading. Outlined, ringed "blimp icon" shapes read as
   clip art, not as this style.
+- The airship's proportions come from 1930s US Navy rigid airships: envelope about 4.5 : 1 with a blunt
+  nose, two swept fins that stop short of the stern, a small black car tucked under the belly. Both
+  artboards use the same shapes; edit the Icon's and copy them to the Banner.
+- The icon reads at 32 px because the black airship crosses the red disc. A big red gondola was tried
+  for the same job and looked like a toy; don't bring it back.
+- Shapes either overlap decisively or keep a clear gap. Edges that nearly touch (fin under a letter,
+  disc resting on the sea line) read as mistakes.
+- The periscope watches the airship: its lens faces the ship. The wake is one chevron drawn over the
+  pipe's foot, with its axis along the sea's slope, not horizontal.
 - New shapes go below the "Print grain" layer, or the grain will not cover them.
 - Export Icon at exactly 64 px (`icon-64.png`, becomes the server's `server-icon.png`) and 256 px, and
-  Banner at 1200 px. Check the icon at 32 px: the red gondola under the black envelope is what makes it
-  read, so keep it clear of the red circle.
+  Banner at 1200 px. Check the icon at 32 px.
+- Affinity's scripting can only reach files on the Desktop: copy the `.af` there to edit it by script,
+  then copy it back.
 - The type is live text in Futura Condensed ExtraBold, a macOS system font; editing it elsewhere needs
   the font installed.
 

@@ -1,6 +1,6 @@
 # Keel & Cloud
 
-![Keel & Cloud: an airship over the sea at dusk, a submarine below](assets/banner.png)
+![Keel & Cloud: an airship climbing over the sea, watched by a periscope](assets/banner.png)
 
 **Build an airship. Fly it across the world. Then build a submarine and go find out what's at the bottom of
 the ocean.**

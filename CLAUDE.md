@@ -24,8 +24,8 @@ These decide what gets added or removed. Check a proposed mod against them befor
 | `server/` | Server image: `Dockerfile`, `entrypoint.sh`, default `server.properties` |
 | `.github/workflows/image.yml` | Builds, boot-tests and publishes the image to ghcr.io |
 | `test/` | Server test harness and checks |
-| `tools/` | Generators for binary files: `servers.dat`, the icon and banner |
-| `assets/` | Icon (64 px for the server list, 256 px for launchers) and README banner, from `tools/icon.py` |
+| `tools/` | Generator for `servers.dat` |
+| `assets/` | Icon (64 px for the server list, 256 px for launchers) and README banner, exported from `assets/source/keel-and-cloud.af` |
 | `Makefile` | `make mrpack` (the file players import), `make test`, `make smoke` |
 | `README.md` | For players and friends: what the pack is, how to install it |
 | `build/`, `dist/` | Test server, caches, built `.mrpack` files (gitignored) |
@@ -78,6 +78,23 @@ Minecraft data version (3955 for 1.21.1), or Minecraft runs its old-format upgra
 
 Keep `enableDeeperOceans = false` in the Deep Seas config: Tectonic already deepens oceans, and the
 YUNG's monument height above is calibrated to Tectonic's sea floor alone.
+
+## Artwork
+
+`assets/source/keel-and-cloud.af` holds two artboards, Icon (512 px) and Banner (1200×400). The style is
+a 1920s Constructivist (Stenberg brothers) film poster: paper, ink, red and blue only; type as structure
+(KEEL diving with the sea, CLOUD over the red circle); the airship seen from below as a solid silhouette;
+the sea field set to Multiply so it overprints the circle; a "Print grain" noise layer on top.
+
+- The audience is 12-year-olds: keep it figurative and bold, neither abstract nor childish.
+- Keep the look flat: no outlines, gradients or shading. Outlined, ringed "blimp icon" shapes read as
+  clip art, not as this style.
+- New shapes go below the "Print grain" layer, or the grain will not cover them.
+- Export Icon at exactly 64 px (`icon-64.png`, becomes the server's `server-icon.png`) and 256 px, and
+  Banner at 1200 px. Check the icon at 32 px: the red gondola under the black envelope is what makes it
+  read, so keep it clear of the red circle.
+- The type is live text in Futura Condensed ExtraBold, a macOS system font; editing it elsewhere needs
+  the font installed.
 
 ## Server image
 

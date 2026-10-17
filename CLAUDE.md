@@ -20,7 +20,7 @@ These decide what gets added or removed. Check a proposed mod against them befor
 | Path | What |
 |---|---|
 | `pack/` | packwiz manifest. `pack/mods/*.pw.toml` is one file per mod |
-| `pack/world/datapacks/keel-and-cloud/` | Our datapack: Create recipes for Ars items, YUNG's monument height |
+| `pack/world/datapacks/keel-and-cloud/` | Our datapack: Create recipes for Ars items, YUNG's monument height, Momster |
 | `server/` | Server image: `Dockerfile`, `entrypoint.sh`, default `server.properties` |
 | `.github/workflows/image.yml` | Builds, boot-tests and publishes the image to ghcr.io |
 | `test/` | Server test harness and checks |
@@ -57,6 +57,21 @@ packwiz is installed with `mise exec go@1.26.7 -- go install github.com/packwiz/
   above Tectonic's deeper sea floor. `start_height` 30–40 was chosen by measurement (`test/monuments.py`):
   higher leaves monuments floating or breaking the surface; `project_start_to_heightmap` samples one
   corner and is worse. Re-measure if Tectonic's ocean settings or YUNG's change.
+
+### Momster
+
+Eating anything in `#keel:pork` summons Momster, a witch who attacks and says "Don't eat non-kosher
+food!". A hidden advancement (`keel:momster/ate_pork`) detects the eating and revokes itself; functions are
+in `keel:momster/`.
+
+- **She is a vanilla witch with a name**, so clients need nothing. A custom mob would need a client mod.
+- **`#keel:pork` holds only foods that always contain pork.** Dumplings, cabbage rolls, barbecue sticks
+  and dog food are left out: pork is one meat choice among several and the item does not record which.
+  When adding a food mod, check its recipes for pork and add those dishes.
+- The cooldown (5 min per player) is longer than her stay (3 min), so each player has at most one.
+- She spawns 3 blocks behind, beside or in front of the player, wherever there is floor and room. On a
+  Sable ship none of those checks see the deck, so she appears on the player instead.
+- She targets the nearest player, which is not always the one who ate.
 
 ## Shipped configs
 

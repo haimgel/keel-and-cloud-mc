@@ -1,0 +1,15 @@
+{
+  "values": [
+    "minecraft:porkchop",
+    "minecraft:cooked_porkchop",
+    { "id": "#c:foods/raw_pork", "required": false },
+    { "id": "#c:foods/cooked_pork", "required": false },
+    { "id": "farmersdelight:ham", "required": false },
+    { "id": "farmersdelight:smoked_ham", "required": false },
+    { "id": "farmersdelight:bacon_sandwich", "required": false },
+    { "id": "farmersdelight:bacon_and_eggs", "required": false },
+    { "id": "farmersdelight:honey_glazed_ham", "required": false },
+    { "id": "farmersdelight:noodle_soup", "required": false },
+    { "id": "farmersdelight:pumpkin_soup", "required": false }
+  ]
+}

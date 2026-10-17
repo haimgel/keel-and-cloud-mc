@@ -224,6 +224,30 @@ file = "world/datapacks/keel-and-cloud/data/betteroceanmonuments/worldgen/struct
 hash = "30e67bdfa71639e2af8e0729a9cc1c9e9875cea08b9a22b867faee7d6a42cf25"
 
 [[files]]
+file = "world/datapacks/keel-and-cloud/data/keel/advancement/momster/ate_pork.json"
+hash = "3ce7a9af8555c36b50d25bf91147f5aba29bb52b6fef615566a31ae901887950"
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/data/keel/function/momster/age.mcfunction"
+hash = "9865c80aa5e2fdf47bdc1e29ed4f80d3d5caa4e9624b7aa026861453172e31c6"
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/data/keel/function/momster/appear.mcfunction"
+hash = "aba9c98a2d83abde38e27f2ed4c705298fbe4c5195ee521ac22d8a15ebd1a99c"
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/data/keel/function/momster/ate_pork.mcfunction"
+hash = "a8d613481f42d532fd6b19500a2187b83dac3c0eeafbdabc2c09550d532195a5"
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/data/keel/function/momster/leave.mcfunction"
+hash = "af16bcdfa3028188e8b6eb8e4dd6c308995945db6d3b641e8b81009119284773"
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/data/keel/function/momster/load.mcfunction"
+hash = "0814231e50e02cd5caed17fd24638128b3a563d03410975a28ae4f53afa93a20"
+
+[[files]]
 file = "world/datapacks/keel-and-cloud/data/keel/recipe/compacting/blank_parchment.json"
 hash = "5b2b0f3707c9d69e9fdbc3f1a75baf987e4fa69bcff2a19acf2c9ab48f1bfad0"
 
@@ -240,5 +264,17 @@ file = "world/datapacks/keel-and-cloud/data/keel/recipe/mixing/sourcestone.json"
 hash = "b7704522f42114f6f7c5cf3e916bf565c3dd57776a5c2c9844dee7f299d05677"
 
 [[files]]
+file = "world/datapacks/keel-and-cloud/data/keel/tags/block/momster_room.json"
+hash = "b5b8b2392f6b76f06fb44a00ad18bcf42715f1fff2818a23906ed423e0f6ddff"
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/data/keel/tags/item/pork.json"
+hash = "4bdb49be7365e07cf6a385319cd49e5e5d08a9ccb6b912ba2c3d9b868a8e2c5a"
+
+[[files]]
+file = "world/datapacks/keel-and-cloud/data/minecraft/tags/function/load.json"
+hash = "7a542d95010c05b8f961635a6f23bc257570b3921a5d0b1efa0dae02b3856453"
+
+[[files]]
 file = "world/datapacks/keel-and-cloud/pack.mcmeta"
-hash = "5b6be168c1ad1a0ba8174c43363ef2c26b0dc8ad430a982e45d2f6a8d8385da8"
+hash = "c348e4762a727076c5dd2ba0c0d5a739731f1f7838ba89812226d8963954a6b2"

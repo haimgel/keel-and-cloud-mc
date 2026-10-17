@@ -1,12 +1,12 @@
 name = "Keel & Cloud"
 author = "haim"
-version = "0.1.4"
+version = "0.1.5"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "ee9c456bf630fffab043c8d29da67eddc20612f0968a99eee42aebd4f12a48dc"
+hash = "5a53237eb62872c2015f0ef6e8a30d5790375d6c42c0f958968bd35f54b8323e"
 
 [versions]
 minecraft = "1.21.1"

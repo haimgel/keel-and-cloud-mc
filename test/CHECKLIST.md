@@ -72,3 +72,7 @@ runs should look the same.
 - [ ] Explore a mineshaft under deep ocean. No mineshaft planks or rails poking out of the ocean floor.
 - [ ] Biomes O' Plenty biomes and Tectonic terrain look coherent: no hard biome edges, no cut-off
       mountains.
+- [ ] Momster, in survival: eat a porkchop and a Farmer's Delight bacon sandwich (reset the cooldown in
+      between with `python3 test/rcon.py 'scoreboard players reset <name> keel.momster'`). Each time a witch
+      named Momster appears nearby, says "Don't eat non-kosher food!" in chat, and attacks. Beef summons
+      nothing. Repeat standing on an assembled airship: she appears on the deck and stays on it.

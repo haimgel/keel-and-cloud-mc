@@ -177,7 +177,11 @@ Pins live in `pack/mods/*.pw.toml`. Record here only what was deliberately not t
 
 | Mod | Decision | Revisit when |
 |---|---|---|
-| Create Deep Seas | Pinned 2.2.4, the first release that starts on a dedicated server. 3.0 (physics rewrite, High Seas module) is pending upstream | 3.0 is released: back up the world, test on a copy first |
+| Create Deep Seas | Pinned 2.2.4. 3.x not taken: 3.3.0, the newest release, has dedicated-server bugs (boats sinking, ship checks generating distant chunks, out-of-memory with many ships) fixed only in 3.4.x betas, which still add and remove features every week. 3.x also deletes the old Weather Vane and Submarine Rudder from worlds, stops Simulated's Symmetric Sails pushing ships, moves `disableStartupScreens` to `create_submarine-client.toml`, and turns on diver pressure damage (`diverPressure`). 3.4.8 boots on the test server | A 3.4+ build marked release: check ships that use Symmetric Sails, ship the client config, back up the world, test on a copy first |
+| Lithostitched | 1.8.0. 1.8.1 makes structure processor injections apply in more places (mineshafts, ruined portals, desert temples), which changes new terrain | An update is needed for a fix: run `--fresh-world` and `test/monuments.py` |
+| ModernFix | 5.27.24. Later builds are performance-only and rewrite the climate lookup that places biomes | We need one of its fixes: run `--fresh-world` and `test/monuments.py` |
+| JEI | 19.51.0.418. Later releases move JEI to a new config system (MezzConfig) and add UI features, with no fix we need | A bug players hit, or a mod in the pack requires a newer JEI |
+| Create: Enchantment Industry | 2.4.2. Every build since is alpha or beta | A newer build is marked release |
 | Sodium | 0.8.13. Sable rejects anything below 0.8.12-alpha.2; Deep Seas rejects 0.6.13 | A Sable or Deep Seas release changes its declared Sodium range |
 | Create: Ars Nouveau Compat | Not taken: despite the name, its recipes mill finished Ars blocks back into scrap and it needs Create: Compat Core | Never, unless it starts making Ars items |
 | Iron's Spells, Northstar, Power Grid, Waystones, Immersive Aircraft | Not taken: duplicate systems, progression, or teleporting | The design rules change |

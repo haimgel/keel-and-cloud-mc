@@ -31,7 +31,7 @@ metafile = true
 
 [[files]]
 file = "mods/corpse.pw.toml"
-hash = "ba5cfcdd228e1313e62dab68512d6ec90d4dbbed842a184f4fdfa7017ec0687a"
+hash = "57f566404d28bad211805b85efb73826895b90cfa7845710473ca2656c678891"
 metafile = true
 
 [[files]]
